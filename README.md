@@ -1,5 +1,7 @@
 My Answers to the Rustlings Project on
 
+Completed to Iterators3.rs
+
 https://github.com/rust-lang/rustlings
 #
 
