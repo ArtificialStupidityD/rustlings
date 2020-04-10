@@ -5,6 +5,7 @@
 struct Person {
     name: String,
     age: usize,
+    // bad: bool,
 }
 
 // We implement the Default trait to use it as a fallback
@@ -14,11 +15,11 @@ impl Default for Person {
         Person {
             name: String::from("John"),
             age: 30,
+            // bad: false,
         }
     }
 }
 
-// I AM NOT DONE
 // Your task is to complete this implementation
 // in order for the line `let p = Person::from("Mark,20")` to compile
 // Please note that you'll need to parse the age component into a `usize`
@@ -31,13 +32,34 @@ impl Default for Person {
 // 3. Extract the first element from the split operation and use it as the name
 // 4. Extract the other element from the split operation and parse it into a `usize` as the age
 // If while parsing the age, something goes wrong, then return the default of Person
-// Otherwise, then return an instantiated Person onject with the results
+// Otherwise, then return an instantiated Person object with the results
 impl From<&str> for Person {
     fn from(s: &str) -> Person {
+        // let temp = s.split(',');
+
+        let vec: Vec<&str> = s.split(',').collect();
+        return if vec.len() < 2 {
+            Person::default()
+        } else {
+            let temp = vec[1].parse::<usize>();
+            return match temp {
+                Ok(s) => Person {
+                    name: String::from(vec[0]),
+                    age: s,
+                    // bad: false,
+                },
+                Err(s) => Person::default()
+            };
+
+        };
     }
 }
 
 fn main() {
+    // use std::num::ParseIntError;
+
+    // use std::error::Error;
+
     // Use the `from` function
     let p1 = Person::from("Mark,20");
     // Since From is implemented for Person, we should be able to use Into
@@ -49,6 +71,7 @@ fn main() {
 #[cfg(test)]
 mod tests {
     use super::*;
+
     #[test]
     fn test_default() {
         // Test that the default person is 30 year old John
@@ -56,6 +79,7 @@ mod tests {
         assert_eq!(dp.name, "John");
         assert_eq!(dp.age, 30);
     }
+
     #[test]
     fn test_bad_convert() {
         // Test that John is returned when bad string is provided
@@ -63,11 +87,23 @@ mod tests {
         assert_eq!(p.name, "John");
         assert_eq!(p.age, 30);
     }
+
     #[test]
     fn test_good_convert() {
         // Test that "Mark,20" works
         let p = Person::from("Mark,20");
         assert_eq!(p.name, "Mark");
         assert_eq!(p.age, 20);
+        // assert_eq!(p.bad, false);
+    }
+
+    #[test]
+    fn test_bad_parse() {
+        // Test that "Mark,blah" returns the default person
+        let p = Person::from("Mark,blah");
+        println!("{:?}", p);
+        assert_eq!(p.name, "John");
+        assert_eq!(p.age, 30);
+        // assert_eq!(p.bad, true);
     }
 }

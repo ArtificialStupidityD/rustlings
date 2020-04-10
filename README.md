@@ -2,46 +2,7 @@ My Answers to the Rustlings Project on
 
 https://github.com/rust-lang/rustlings
 
-Completed:
-
-✓ Successfully compiled exercises/variables/variables1.rs!  
-✓ Successfully compiled exercises/variables/variables2.rs!  
-✓ Successfully compiled exercises/variables/variables3.rs!  
-✓ Successfully compiled exercises/variables/variables4.rs!  
-✓ Successfully compiled exercises/variables/variables5.rs!  
-✓ Successfully compiled exercises/functions/functions1.rs!  
-✓ Successfully compiled exercises/functions/functions2.rs!  
-✓ Successfully compiled exercises/functions/functions3.rs!  
-✓ Successfully compiled exercises/functions/functions4.rs!  
-✓ Successfully compiled exercises/functions/functions5.rs!  
-✓ Successfully compiled exercises/primitive_types/primitive_types1.rs!  
-✓ Successfully compiled exercises/primitive_types/primitive_types2.rs!  
-✓ Successfully compiled exercises/primitive_types/primitive_types3.rs!  
-✓ Successfully compiled exercises/primitive_types/primitive_types5.rs!  
-✓ Successfully compiled exercises/primitive_types/primitive_types6.rs!  
-✓ Successfully compiled exercises/strings/strings1.rs!  
-✓ Successfully compiled exercises/strings/strings2.rs!  
-✓ Successfully compiled exercises/test2.rs!  
-✓ Successfully compiled exercises/enums/enums1.rs!  
-✓ Successfully compiled exercises/enums/enums2.rs!  
-✓ Successfully compiled exercises/modules/modules1.rs!  
-✓ Successfully compiled exercises/modules/modules2.rs!  
-✓ Successfully compiled exercises/macros/macros1.rs!  
-✓ Successfully compiled exercises/macros/macros2.rs!  
-✓ Successfully compiled exercises/macros/macros3.rs!  
-✓ Successfully compiled exercises/macros/macros4.rs!  
-✓ Successfully compiled exercises/move_semantics/move_semantics1.rs!  
-✓ Successfully compiled exercises/move_semantics/move_semantics2.rs!  
-✓ Successfully compiled exercises/move_semantics/move_semantics3.rs!  
-✓ Successfully compiled exercises/move_semantics/move_semantics4.rs!  
-✓ Successfully compiled exercises/clippy/clippy1.rs!  
-✓ Successfully compiled exercises/clippy/clippy2.rs!  
-✓ Successfully compiled exercises/standard_library_types/arc1.rs!  
-
-as well as Iterators1.rs to Iterators4.rs
-
-#
-
+# All Exercises completed
 
 ![crab pet](https://i.imgur.com/LbZJgmm.gif)
 
